@@ -6,17 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fcfffc"
-    tools:context=".activity_nuevos_medicamentos">
-
+    tools:context=".activity_asignar_medicamentos">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="407dp"
+        android:layout_height="565dp"
         android:layout_marginTop="1dp"
-        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
@@ -25,7 +22,7 @@
             android:id="@+id/txtNombreCitas"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/ic_edittext_background"
             android:ems="10"
             android:inputType="text"
@@ -45,12 +42,12 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="3dp"
             android:fontFamily="sans-serif"
-            android:text="Nombre del medicamento"
+            android:text="Hora de aplicación"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/txtNombreCitas"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnPacientes" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <TextView
             android:id="@+id/textView27"
@@ -61,18 +58,18 @@
             android:layout_marginBottom="3dp"
             android:fontFamily="sans-serif"
             android:inputType="textMultiLine"
-            android:text="Descripción del medicamento"
+            android:text="Paciente correspondiente"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/txtDuiSolicitud"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtNombreCitas" />
 
-        <EditText
+        <Spinner
             android:id="@+id/txtDuiSolicitud"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/ic_edittext_background"
             android:clickable="false"
             android:ems="10"
@@ -85,35 +82,66 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
-        <Button
-            android:id="@+id/btnEnviarFormulario"
+        <TextView
+            android:id="@+id/txtMedicamento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:backgroundTint="#3BDA51"
+            android:layout_marginTop="28dp"
             android:fontFamily="sans-serif"
-            android:text="Agregar medicamento"
-            android:textColor="@color/white"
+            android:inputType="textMultiLine"
+            android:text="Medicamento correspondiente"
+            android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtDuiSolicitud" />
 
-        <Button
-            android:id="@+id/btnAsignarMedicamentos"
-            android:layout_width="wrap_content"
+        <Spinner
+            android:id="@+id/spMedicamentos"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/ic_edittext_background"
+            android:clickable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="none"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMedicamento" />
+
+        <Button
+            android:id="@+id/btnAplicarMedicamento"
+            android:layout_width="124dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="60dp"
             android:backgroundTint="#3BDA51"
             android:fontFamily="sans-serif"
-            android:text="Asignar medicamento"
+            android:text="Aplicar"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spMedicamentos" />
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="124dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="#3BDA51"
+            android:fontFamily="sans-serif"
+            android:text="Volver"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnEnviarFormulario" />
+            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintStart_toEndOf="@+id/btnAplicarMedicamento"
+            app:layout_constraintTop_toBottomOf="@+id/spMedicamentos" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -143,7 +171,7 @@
                 android:layout_height="64dp"
                 android:layout_marginStart="30dp"
                 android:fontFamily="sans-serif"
-                android:text="Registro de medicamentos"
+                android:text="Asignar medicamentos"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="20dp"
@@ -156,39 +184,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
-            android:id="@+id/btnCitasAgendadasA"
-            android:layout_width="180dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="19dp"
-            android:backgroundTint="#3BDA51"
-            android:fontFamily="sans-serif"
-            android:text="Medicamentos"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnPacientes"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-        <Button
-            android:id="@+id/btnPacientes"
-            android:layout_width="180dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="6dp"
-            android:backgroundTint="#d6d6d6"
-            android:fontFamily="sans-serif"
-            android:text="Pacientes"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/btnCitasAgendadasA"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -237,6 +232,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
