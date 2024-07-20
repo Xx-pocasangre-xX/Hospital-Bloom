@@ -12,7 +12,7 @@
         android:id="@+id/IvLogoBloom"
         android:layout_width="399dp"
         android:layout_height="339dp"
-        android:layout_marginTop="205dp"
+        android:layout_marginTop="204dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
