@@ -353,12 +353,8 @@
             android:layout_width="41dp"
             android:layout_height="43dp"
             android:layout_marginBottom="1dp"
-<<<<<<< HEAD
             android:background="@drawable/ic_circulo_menu"
-            app:layout_constraintBottom_toTopOf="@+id/btnNoticias"
-=======
             app:layout_constraintBottom_toTopOf="@+id/btnHome"
->>>>>>> d5740b472ff0bea158d04921c7947a9fdf3c3fca
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.70"
             app:layout_constraintStart_toStartOf="parent" />
