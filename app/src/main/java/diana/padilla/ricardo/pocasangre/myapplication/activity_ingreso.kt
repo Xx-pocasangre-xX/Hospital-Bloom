@@ -32,14 +32,6 @@ class activity_ingreso : AppCompatActivity() {
             insets
         }
 
-        /*val btnRegistrarse = findViewById<Button>(R.id.btnRegistrarseIngresoInterfaz)
-
-        btnRegistrarse.setOnClickListener{
-            val pantallaRegistrarse = Intent(this, activity_registrarse::class.java)
-            startActivity(pantallaRegistrarse)
-            overridePendingTransition(0, 0)
-        }*/
-
         val txtCorreo = findViewById<EditText>(R.id.txtCorreoIngreso)
         val txtContrasena = findViewById<EditText>(R.id.txtContrasenaIngreso)
         val btnLogin = findViewById<Button>(R.id.btnIniciarSesionIngreso)
@@ -63,7 +55,7 @@ class activity_ingreso : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
-                val pantallaIngresoPacientes = Intent(this, activity_registro_pacientes ::class.java)
+                val pantallaListadoPacientes = Intent(this, activity_listado_pacientes::class.java)
 
                 CoroutineScope(Dispatchers.IO).launch {
 
@@ -72,17 +64,18 @@ class activity_ingreso : AppCompatActivity() {
                     val comprobarUsuario =
                         objConexion?.prepareStatement("SELECT * FROM Usuarios_Enfermeros WHERE correo_usuario = ? AND contrasena = ?")!!
                     comprobarUsuario.setString(1, txtCorreo.text.toString())
+                    comprobarUsuario.setString(2, txtContrasena.text.toString())
                     val resultado = comprobarUsuario.executeQuery()
 
                     if (resultado.next()) {
                         val correoIng = txtCorreo.text.toString()
-                        pantallaIngresoPacientes.putExtra("correoIng", correoIng)
+                        pantallaListadoPacientes.putExtra("correoIng", correoIng)
 
                         miMorreo = txtCorreo.text.toString()
                         runOnUiThread{
                             Toast.makeText(this@activity_ingreso, "Bienvenid@!", Toast.LENGTH_SHORT).show()
                         }
-                        startActivity(pantallaIngresoPacientes)
+                        startActivity(pantallaListadoPacientes)
                         finish()
                     } else {
                         runOnUiThread{

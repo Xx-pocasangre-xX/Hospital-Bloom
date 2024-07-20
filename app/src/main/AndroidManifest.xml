@@ -15,6 +15,9 @@
         android:theme="@style/Theme.HospitalBloom"
         tools:targetApi="31">
         <activity
+            android:name=".activity_asignar_medicamentos"
+            android:exported="false" />
+        <activity
             android:name=".activity_nuevos_medicamentos"
             android:exported="false" />
         <activity

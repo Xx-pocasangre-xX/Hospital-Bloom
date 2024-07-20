@@ -353,14 +353,18 @@
             android:layout_width="41dp"
             android:layout_height="43dp"
             android:layout_marginBottom="1dp"
+<<<<<<< HEAD
             android:background="@drawable/ic_circulo_menu"
             app:layout_constraintBottom_toTopOf="@+id/btnNoticias"
+=======
+            app:layout_constraintBottom_toTopOf="@+id/btnHome"
+>>>>>>> d5740b472ff0bea158d04921c7947a9fdf3c3fca
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.70"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/btnNoticias"
+            android:id="@+id/btnHome"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="100dp"
@@ -376,7 +380,7 @@
             android:layout_height="48dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnNoticias"
+            app:layout_constraintStart_toEndOf="@+id/btnHome"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.555"
             app:srcCompat="@drawable/ic_active_agregar" />

@@ -25,5 +25,12 @@ class activity_nuevos_medicamentos : AppCompatActivity() {
             startActivity(pantallaRegistroPacientes)
             overridePendingTransition(0, 0)
         }
+
+        val btnAsignarMedicamentos = findViewById<Button>(R.id.btnAsignarMedicamentos)
+        btnAsignarMedicamentos.setOnClickListener {
+            val pantallaAsignarMedicamentos = Intent(this, activity_asignar_medicamentos::class.java)
+            startActivity(pantallaAsignarMedicamentos)
+            overridePendingTransition(0, 0)
+        }
     }
 }
