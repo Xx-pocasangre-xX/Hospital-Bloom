@@ -9,181 +9,157 @@
     tools:context=".activity_asignar_medicamentos">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="407dp"
-        android:layout_height="565dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout5"
+        android:id="@+id/btnRegresar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="360dp"
+        android:background="@drawable/ic_boton_volver"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/txtNombreCitas"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_edittext_background"
+        android:ems="10"
+        android:fontFamily="@font/raleway_extrabold_italic"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-        <EditText
-            android:id="@+id/txtNombreCitas"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/ic_edittext_background"
-            android:ems="10"
-            android:inputType="text"
-            android:textColor="#000000"
-            android:textSize="16sp"
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/raleway_extrabold_italic"
+        android:text="Hora de aplicación"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombreCitas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/raleway_extrabold_italic"
+        android:inputType="textMultiLine"
+        android:text="Paciente correspondiente"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDuiSolicitud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreCitas" />
+
+    <Spinner
+        android:id="@+id/txtDuiSolicitud"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_edittext_background"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        android:textColorHint="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <TextView
+        android:id="@+id/txtMedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/raleway_extrabold_italic"
+        android:inputType="textMultiLine"
+        android:text="Medicamento correspondiente"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/spMedicamentos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDuiSolicitud" />
+
+    <Spinner
+        android:id="@+id/spMedicamentos"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_edittext_background"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        android:textColorHint="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMedicamento" />
+
+    <Button
+        android:id="@+id/btnAplicarMedicamento"
+        android:layout_width="124dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#3BDA51"
+        android:fontFamily="@font/raleway_semibold_italic"
+        android:text="Aplicar"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spMedicamentos" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="411dp"
+        android:layout_height="200dp"
+        android:background="@drawable/ic_fondo_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivSmallLogo"
+            android:layout_width="70dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.509"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_bloom" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="26dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="3dp"
-            android:fontFamily="sans-serif"
-            android:text="Hora de aplicación"
+            android:layout_marginTop="105dp"
+            android:fontFamily="@font/raleway_extrabold_italic"
+            android:text="Asignar medicamentos"
+            android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/txtNombreCitas"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-        <TextView
-            android:id="@+id/textView27"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="26dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="3dp"
-            android:fontFamily="sans-serif"
-            android:inputType="textMultiLine"
-            android:text="Paciente correspondiente"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/txtDuiSolicitud"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtNombreCitas" />
-
-        <Spinner
-            android:id="@+id/txtDuiSolicitud"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/ic_edittext_background"
-            android:clickable="false"
-            android:ems="10"
-            android:focusable="false"
-            android:inputType="none"
-            android:textColorHint="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.509"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView27" />
-
-        <TextView
-            android:id="@+id/txtMedicamento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:fontFamily="sans-serif"
-            android:inputType="textMultiLine"
-            android:text="Medicamento correspondiente"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.16"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtDuiSolicitud" />
-
-        <Spinner
-            android:id="@+id/spMedicamentos"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:background="@drawable/ic_edittext_background"
-            android:clickable="false"
-            android:ems="10"
-            android:focusable="false"
-            android:inputType="none"
-            android:textColorHint="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtMedicamento" />
-
-        <Button
-            android:id="@+id/btnAplicarMedicamento"
-            android:layout_width="124dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="60dp"
-            android:backgroundTint="#3BDA51"
-            android:fontFamily="sans-serif"
-            android:text="Aplicar"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spMedicamentos" />
-
-        <Button
-            android:id="@+id/btnRegresar"
-            android:layout_width="124dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="60dp"
-            android:backgroundTint="#3BDA51"
-            android:fontFamily="sans-serif"
-            android:text="Volver"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.315"
-            app:layout_constraintStart_toEndOf="@+id/btnAplicarMedicamento"
-            app:layout_constraintTop_toBottomOf="@+id/spMedicamentos" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="373dp"
-            android:layout_height="96dp"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/fondo_gris"
+            android:textSize="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/ivSmallLogo"
-                android:layout_width="70dp"
-                android:layout_height="69dp"
-                android:layout_marginStart="28dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.518"
-                app:srcCompat="@drawable/logo_bloom" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="135dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="30dp"
-                android:fontFamily="sans-serif"
-                android:text="Asignar medicamentos"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/ivSmallLogo"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.593" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -203,13 +179,13 @@
             android:layout_width="41dp"
             android:layout_height="43dp"
             android:layout_marginBottom="1dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnNoticias"
+            app:layout_constraintBottom_toTopOf="@+id/btnHome"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.70"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/btnNoticias"
+            android:id="@+id/btnHome"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="100dp"
@@ -220,12 +196,12 @@
             app:srcCompat="@drawable/ic_home" />
 
         <ImageView
-            android:id="@+id/btnCitas"
+            android:id="@+id/btnAgregar"
             android:layout_width="48dp"
             android:layout_height="48dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnNoticias"
+            app:layout_constraintStart_toEndOf="@+id/btnHome"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.555"
             app:srcCompat="@drawable/ic_active_agregar" />
