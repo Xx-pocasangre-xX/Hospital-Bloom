@@ -79,13 +79,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.666"
+            app:layout_constraintVertical_bias="0.555"
             app:srcCompat="@drawable/ic_active_home" />
 
         <ImageView
-            android:id="@+id/btnCitas"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:id="@+id/btnAgregar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnNoticias"

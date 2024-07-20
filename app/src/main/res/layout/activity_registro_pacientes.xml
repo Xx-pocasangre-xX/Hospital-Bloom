@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fcfffc"
+    tools:context=".activity_registro_pacientes">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtNombreCitas"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/ic_edittext_background"
+                android:ems="10"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="sans-serif"
+                android:text="Nombres"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtNombreCitas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnFormularioCitas" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="sans-serif"
+                android:text="Número de cama"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtTipoSangreSolicitud"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtFechaSolicitud" />
+
+            <EditText
+                android:id="@+id/txtTipoSangreSolicitud"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/ic_edittext_background"
+                android:ems="10"
+                android:textColorHint="@color/black"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="sans-serif"
+                android:text="Apellidos"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtDuiSolicitud"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombreCitas" />
+
+            <EditText
+                android:id="@+id/txtDuiSolicitud"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/ic_edittext_background"
+                android:ems="10"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="sans-serif"
+                android:text="Enfermedad"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtTelefonoCitas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCorreoSolicitud" />
+
+            <EditText
+                android:id="@+id/txtTelefonoCitas"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/ic_edittext_background"
+                android:ems="10"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                android:inputType="phone"
+                android:focusable="false"
+                android:clickable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="sans-serif"
+                android:text="Edad"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtCorreoSolicitud"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDuiSolicitud" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="sans-serif"
+                android:text="Número de habitación"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtFechaSolicitud"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTelefonoCitas" />
+
+            <EditText
+                android:id="@+id/txtCorreoSolicitud"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/ic_edittext_background"
+                android:ems="10"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                android:inputType="textEmailAddress"
+                android:focusable="false"
+                android:clickable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <EditText
+                android:id="@+id/txtFechaSolicitud"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/ic_edittext_background"
+                android:ems="10"
+                android:textColor="#000000"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20"  />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="sans-serif"
+                android:text="Fecha Ingreso"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtMotivoCitas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTipoSangreSolicitud" />
+
+            <EditText
+                android:id="@+id/txtMotivoCitas"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/ic_edittext_background"
+                android:ems="10"
+                android:textColor="#000000"
+                android:gravity="start|top"
+                android:inputType="text"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnEnviarFormulario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+            <Button
+                android:id="@+id/btnEnviarFormulario"
+                android:backgroundTint="#3BDA51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif"
+                android:text="Enviar"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtMotivoCitas" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:text="TextView"
+                app:layout_constraintTop_toBottomOf="@+id/btnEnviarFormulario"
+                tools:layout_editor_absoluteX="37dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:background="@drawable/fondo_gris"
+                android:layout_width="373dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="17dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivSmallLogo"
+                    android:layout_width="70dp"
+                    android:layout_height="69dp"
+                    android:layout_marginStart="36dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.518"
+                    app:srcCompat="@drawable/logo_bloom" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="130dp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Registro de pacientes"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/ivSmallLogo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.515" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btnCitasAgendadasA"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="19dp"
+                android:backgroundTint="#d6d6d6"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Medicamentos"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnFormularioCitas"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+            <Button
+                android:id="@+id/btnFormularioCitas"
+                android:backgroundTint="#3BDA51"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Pacientes"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnCitasAgendadasA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:background="#CCCCCC"
+        android:layout_width="412dp"
+        android:layout_height="86dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/ivMenuCircle"
+            android:background="@drawable/ic_circulo_menu"
+            android:layout_width="41dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnNoticias"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.70"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnNoticias"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.555"
+            app:srcCompat="@drawable/ic_home" />
+
+        <ImageView
+            android:id="@+id/btnCitas"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnNoticias"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.555"
+            app:srcCompat="@drawable/ic_active_agregar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
