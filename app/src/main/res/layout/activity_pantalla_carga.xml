@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_pantalla"
-    tools:context=".MainActivity" >
+    tools:context=".activity_pantalla_carga">
 
     <ImageView
         android:id="@+id/IvLogoBloom"
@@ -18,22 +18,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_bloom" />
 
-    <Button
-        android:id="@+id/btnIniciarSesionPantalla"
-        android:layout_width="308dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="44dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="sans-serif"
-        android:text="Iniciar Sesión"
-        android:textColor="#039117"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:iconPadding="8dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="408dp"
+        android:layout_height="215dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/IvLogoBloom"
-        app:layout_constraintVertical_bias="0.951" />
+        app:layout_constraintVertical_bias="0.935"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/puntoscarga" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
