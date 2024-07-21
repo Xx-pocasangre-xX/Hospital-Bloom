@@ -10,13 +10,12 @@
 
 
     <EditText
-        android:id="@+id/txtNombreCitas"
+        android:id="@+id/txtNombreMedicamento"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/ic_edittext_background"
         android:ems="10"
-        android:fontFamily="@font/raleway_extrabold_italic"
         android:inputType="text"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -35,7 +34,7 @@
         android:text="Nombre del medicamento"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtNombreCitas"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombreMedicamento"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPacientes" />
 
@@ -51,29 +50,27 @@
         android:text="Descripción del medicamento"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtDuiSolicitud"
+        app:layout_constraintBottom_toTopOf="@+id/txtDescripcionMedicamento"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreCitas" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreMedicamento" />
 
     <EditText
-        android:id="@+id/txtDuiSolicitud"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:id="@+id/txtDescripcionMedicamento"
+        android:layout_width="362dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/ic_edittext_background"
-        android:clickable="false"
         android:ems="10"
-        android:focusable="false"
-        android:fontFamily="@font/raleway_extrabold_italic"
-        android:inputType="none"
-        android:textColorHint="@color/black"
+        android:textColor="#000000"
         android:textSize="16sp"
+        android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     <Button
-        android:id="@+id/btnEnviarFormulario"
+        android:id="@+id/btnAgregarMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -82,15 +79,16 @@
         android:text="Agregar medicamento"
         android:textColor="@color/white"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAsignarMedicamentos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDuiSolicitud" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcionMedicamento" />
 
     <Button
         android:id="@+id/btnAsignarMedicamentos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="#3BDA51"
         android:fontFamily="@font/raleway_semibold_italic"
@@ -99,8 +97,9 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEnviarFormulario" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnCitasAgendadasA"
