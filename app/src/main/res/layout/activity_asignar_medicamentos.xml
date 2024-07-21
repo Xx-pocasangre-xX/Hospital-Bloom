@@ -22,13 +22,12 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
-        android:id="@+id/txtNombreCitas"
+        android:id="@+id/txtHoraAplicacion"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/ic_edittext_background"
         android:ems="10"
-        android:fontFamily="@font/raleway_extrabold_italic"
         android:inputType="text"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -47,7 +46,7 @@
         android:text="Hora de aplicación"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtNombreCitas"
+        app:layout_constraintBottom_toTopOf="@+id/txtHoraAplicacion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
@@ -63,21 +62,18 @@
         android:text="Paciente correspondiente"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtDuiSolicitud"
+        app:layout_constraintBottom_toTopOf="@+id/spPacientes"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreCitas" />
+        app:layout_constraintTop_toBottomOf="@+id/txtHoraAplicacion" />
 
     <Spinner
-        android:id="@+id/txtDuiSolicitud"
+        android:id="@+id/spPacientes"
         android:layout_width="360dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/ic_edittext_background"
-        android:clickable="false"
         android:ems="10"
-        android:focusable="false"
-        android:inputType="none"
-        android:textColorHint="@color/black"
+        android:inputType="text"
+        style="@style/TextColor2"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,19 +93,16 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/spMedicamentos"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDuiSolicitud" />
+        app:layout_constraintTop_toBottomOf="@+id/spPacientes" />
 
     <Spinner
         android:id="@+id/spMedicamentos"
         android:layout_width="360dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/ic_edittext_background"
-        android:clickable="false"
         android:ems="10"
-        android:focusable="false"
-        android:inputType="none"
-        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
