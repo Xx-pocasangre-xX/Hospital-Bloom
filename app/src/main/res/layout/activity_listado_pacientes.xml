@@ -95,6 +95,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvPacientes"
         android:layout_width="405dp"
         android:layout_height="515dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
