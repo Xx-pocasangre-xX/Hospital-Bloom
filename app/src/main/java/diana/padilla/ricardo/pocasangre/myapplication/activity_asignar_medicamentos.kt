@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -19,7 +20,7 @@ class activity_asignar_medicamentos : AppCompatActivity() {
             insets
         }
 
-        val btnRegresar = findViewById<Button>(R.id.btnRegresar)
+        val btnRegresar = findViewById<ConstraintLayout>(R.id.btnRegresar)
         btnRegresar.setOnClickListener {
             val pantallaNuevosMedicamentos = Intent(this, activity_nuevos_medicamentos::class.java)
             startActivity(pantallaNuevosMedicamentos)
