@@ -64,6 +64,13 @@ class activity_listado_pacientes : AppCompatActivity() {
         }
 
         CoroutineScope(Dispatchers.IO).launch {
+            val nuevosPacientes = obtenerPacientes()
+            withContext(Dispatchers.IO){
+                (rcvPacientes.adapter as? AdaptadorPacientes)?.ActualizarLista(nuevosPacientes)
+            }
+        }
+
+        CoroutineScope(Dispatchers.IO).launch {
             val pacientesDB = obtenerPacientes()
             withContext(Dispatchers.Main){
                 val adapter = AdaptadorPacientes(pacientesDB)

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.HospitalBloom"
         tools:targetApi="31">
         <activity
+            android:name=".activity_paciente_detalles"
+            android:exported="false" />
+        <activity
             android:name=".activity_card_pacientes"
             android:exported="false" />
         <activity
