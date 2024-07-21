@@ -22,7 +22,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/txtNombreCitas"
+                android:id="@+id/txtNombrePacientes"
                 android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -47,9 +47,9 @@
                 android:text="Nombres"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toTopOf="@+id/txtNombreCitas"
+                app:layout_constraintBottom_toTopOf="@+id/txtNombrePacientes"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnFormularioCitas" />
+                app:layout_constraintTop_toBottomOf="@+id/btnPacientes" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -64,7 +64,7 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/txtTipoSangreSolicitud"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtFechaSolicitud" />
+                app:layout_constraintTop_toBottomOf="@+id/txtNumeroHabitacion" />
 
             <EditText
                 android:id="@+id/txtTipoSangreSolicitud"
@@ -93,12 +93,12 @@
                 android:text="Apellidos"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/txtDuiSolicitud"
+                app:layout_constraintBottom_toTopOf="@+id/txtApellidosPacientes"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtNombreCitas" />
+                app:layout_constraintTop_toBottomOf="@+id/txtNombrePacientes" />
 
             <EditText
-                android:id="@+id/txtDuiSolicitud"
+                android:id="@+id/txtApellidosPacientes"
                 android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -125,12 +125,12 @@
                 android:text="Enfermedad"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/txtTelefonoCitas"
+                app:layout_constraintBottom_toTopOf="@+id/txtEnfermedadPacientes"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtCorreoSolicitud" />
+                app:layout_constraintTop_toBottomOf="@+id/txtEdadPacientes" />
 
             <EditText
-                android:id="@+id/txtTelefonoCitas"
+                android:id="@+id/txtEnfermedadPacientes"
                 android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -157,9 +157,9 @@
                 android:text="Edad"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/txtCorreoSolicitud"
+                app:layout_constraintBottom_toTopOf="@+id/txtEdadPacientes"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDuiSolicitud" />
+                app:layout_constraintTop_toBottomOf="@+id/txtApellidosPacientes" />
 
             <TextView
                 android:id="@+id/textView20"
@@ -172,12 +172,12 @@
                 android:text="Número de habitación"
                 android:textColor="@color/black"
                 android:textSize="19sp"
-                app:layout_constraintBottom_toTopOf="@+id/txtFechaSolicitud"
+                app:layout_constraintBottom_toTopOf="@+id/txtNumeroHabitacion"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtTelefonoCitas" />
+                app:layout_constraintTop_toBottomOf="@+id/txtEnfermedadPacientes" />
 
             <EditText
-                android:id="@+id/txtCorreoSolicitud"
+                android:id="@+id/txtEdadPacientes"
                 android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -194,7 +194,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
             <EditText
-                android:id="@+id/txtFechaSolicitud"
+                android:id="@+id/txtNumeroHabitacion"
                 android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -220,12 +220,12 @@
                 android:text="Fecha Ingreso"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/txtMotivoCitas"
+                app:layout_constraintBottom_toTopOf="@+id/txtFechaIngreso"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtTipoSangreSolicitud" />
 
             <EditText
-                android:id="@+id/txtMotivoCitas"
+                android:id="@+id/txtFechaIngreso"
                 android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -254,7 +254,7 @@
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtMotivoCitas" />
+                app:layout_constraintTop_toBottomOf="@+id/txtFechaIngreso" />
 
             <TextView
                 android:id="@+id/textView28"
@@ -315,11 +315,11 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btnFormularioCitas"
+                app:layout_constraintStart_toEndOf="@+id/btnPacientes"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
             <Button
-                android:id="@+id/btnFormularioCitas"
+                android:id="@+id/btnPacientes"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="19dp"
