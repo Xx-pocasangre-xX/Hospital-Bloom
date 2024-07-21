@@ -2,5 +2,6 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/raleway_extrabold_italic</item>
+        <item>@font/raleway_semibold_italic</item>
     </array>
 </resources>
