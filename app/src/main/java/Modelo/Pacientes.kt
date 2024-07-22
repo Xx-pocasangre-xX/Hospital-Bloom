@@ -1,12 +1,12 @@
 package Modelo
 
 data class Pacientes(
-    val id_paciente: Int,
-    val nombres: String,
-    val apellidos: String,
-    val edad: Int,
-    val enfermaedad: String,
-    val numero_habitacion: Int,
-    val numero_cama: Int,
-    val fecha_ingreso: String
+    var id_paciente: Int,
+    var nombres: String,
+    var apellidos: String,
+    var edad: Int,
+    var enfermaedad: String,
+    var numero_habitacion: Int,
+    var numero_cama: Int,
+    var fecha_ingreso: String
 )
