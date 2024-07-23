@@ -300,7 +300,7 @@ class AdaptadorPacientes(var Datos: List<Pacientes>): RecyclerView.Adapter<ViewH
         } catch (e: Exception){
             Log.e("AdaptadorPacientes", "Error al mostrar el dialog", e)
                 withContext(Dispatchers.Main){
-                    Toast.makeText(context, "No se pudo mostrar la información del paciente, debes asignar un medicamento antes", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Debes asignar un medicamento para mostrar los datos", Toast.LENGTH_LONG).show()
                 }
         }
     }
