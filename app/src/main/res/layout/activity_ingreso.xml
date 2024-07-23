@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:fontFamily="sans-serif"
-            android:text="¿Olvidaste tu contraseña?"
+            android:text="Use el modo claro para una mejor experiencia!"
             android:textColor="#2255A0"
             android:textSize="12sp"
             android:textStyle="italic"
