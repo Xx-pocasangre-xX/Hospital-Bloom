@@ -107,7 +107,7 @@ class activity_registro_pacientes : AppCompatActivity() {
                     withContext(Dispatchers.Main) {
                         AlertDialog.Builder(this@activity_registro_pacientes)
                             .setTitle("Registro de paciente exitoso!")
-                            .setMessage("El paciente se ha guardado exitosamente.")
+                            .setMessage("Ahora debes asignar un medicamento!")
                             .setPositiveButton("Aceptar", null)
                             .show()
                         txtNombrePacientes.setText("")

@@ -4,7 +4,9 @@ import Modelo.ClaseConexion
 import Modelo.Pacientes
 import Modelo.PacientesDetalles
 import android.app.AlertDialog
+import android.app.DatePickerDialog
 import android.content.Context
+import android.icu.util.Calendar
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -206,6 +208,25 @@ class AdaptadorPacientes(var Datos: List<Pacientes>): RecyclerView.Adapter<ViewH
             val editHabitacion = dialogView.findViewById<EditText>(R.id.txtNumeroHabitacionEdit)
             val editCama = dialogView.findViewById<EditText>(R.id.txtNumeroCamaEdit)
             val editIngreso = dialogView.findViewById<EditText>(R.id.txtFechaIngresoEdit)
+
+            editIngreso.setOnClickListener {
+                val calendario = Calendar.getInstance()
+                val anio = calendario.get(Calendar.YEAR)
+                val mes = calendario.get(Calendar.MONTH)
+                val dia = calendario.get(Calendar.DAY_OF_MONTH)
+
+                val datePickerDialog = DatePickerDialog(
+                    context,
+                    { view, anioSeleccionado, mesSeleccionado, diaSeleccionado ->
+                        val calendarioSeleccionado = Calendar.getInstance()
+                        calendarioSeleccionado.set(anioSeleccionado, mesSeleccionado, diaSeleccionado)
+                            val fechaSeleccionada = "$diaSeleccionado/${mesSeleccionado + 1}/$anioSeleccionado"
+                            editIngreso.setText(fechaSeleccionada)
+                    },
+                    anio, mes, dia
+                )
+                datePickerDialog.show()
+            }
 
             editEdad.setHint(item.edad.toString())
             editEnfermedad.setHint(item.enfermaedad)
