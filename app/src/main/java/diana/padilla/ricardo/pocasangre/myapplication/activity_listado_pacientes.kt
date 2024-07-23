@@ -39,29 +39,40 @@ class activity_listado_pacientes : AppCompatActivity() {
 
         rcvPacientes.layoutManager = LinearLayoutManager(this)
 
-        fun obtenerPacientes(): List<Pacientes>{
-            val objConexion = ClaseConexion().cadenaConexion()
-            val statement = objConexion?.createStatement()
-            val resultSet = statement?.executeQuery("SELECT * FROM Pacientes")!!
+        fun obtenerPacientes(): List<Pacientes> {
             val listaPacientes = mutableListOf<Pacientes>()
+            val objConexion = ClaseConexion().cadenaConexion()
+            objConexion?.use { conn ->
+                val statement = conn.createStatement()
+                val resultSet = statement?.executeQuery("SELECT * FROM Pacientes")!!
+                while (resultSet.next()) {
+                    val id_paciente = resultSet.getInt("id_paciente")
+                    val nombres = resultSet.getString("nombres")
+                    val apellidos = resultSet.getString("apellidos")
+                    val edad = resultSet.getInt("edad")
+                    val enfermaedad = resultSet.getString("enfermaedad")
+                    val numero_habitacion = resultSet.getInt("numero_habitacion")
+                    val numero_cama = resultSet.getInt("numero_cama")
+                    val fecha_ingreso = resultSet.getDate("fecha_ingreso")
+                    val valoresJuntos = Pacientes(
+                        id_paciente,
+                        nombres,
+                        apellidos,
+                        edad,
+                        enfermaedad,
+                        numero_habitacion,
+                        numero_cama,
+                        fecha_ingreso.toString()
+                    )
 
-            while (resultSet.next()){
-                val id_paciente = resultSet.getInt("id_paciente")
-                val nombres = resultSet.getString("nombres")
-                val apellidos = resultSet.getString("apellidos")
-                val edad = resultSet.getInt("edad")
-                val enfermaedad = resultSet.getString("enfermaedad")
-                val numero_habitacion = resultSet.getInt("numero_habitacion")
-                val numero_cama = resultSet.getInt("numero_cama")
-                val fecha_ingreso = resultSet.getDate("fecha_ingreso")
-                val valoresJuntos = Pacientes(id_paciente, nombres, apellidos, edad, enfermaedad, numero_habitacion, numero_cama, fecha_ingreso.toString())
-
-                listaPacientes.add(valoresJuntos)
+                    listaPacientes.add(valoresJuntos)
+                }
             }
 
-            return listaPacientes
+                return listaPacientes
 
-        }
+            }
+
 
         CoroutineScope(Dispatchers.IO).launch {
             val nuevosPacientes = obtenerPacientes()

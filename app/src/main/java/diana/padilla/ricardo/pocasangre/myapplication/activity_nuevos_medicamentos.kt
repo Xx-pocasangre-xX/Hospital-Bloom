@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +26,13 @@ class activity_nuevos_medicamentos : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val btnHome = findViewById<ImageView>(R.id.btnHome)
+        btnHome.setOnClickListener {
+            val pantallaListadoPacientes = Intent(this, activity_listado_pacientes::class.java)
+            startActivity(pantallaListadoPacientes)
+            overridePendingTransition(0, 0)
         }
 
         val btnPacientes = findViewById<Button>(R.id.btnPacientes)

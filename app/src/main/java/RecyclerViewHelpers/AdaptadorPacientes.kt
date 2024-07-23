@@ -21,6 +21,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.w3c.dom.Text
 import java.sql.ResultSet
+import java.sql.SQLException
 
 class AdaptadorPacientes(var Datos: List<Pacientes>): RecyclerView.Adapter<ViewHolderPacientes>() {
 
@@ -56,13 +57,21 @@ class AdaptadorPacientes(var Datos: List<Pacientes>): RecyclerView.Adapter<ViewH
             val objConexion = ClaseConexion().cadenaConexion()
             if(objConexion != null) {
                 try {
+                    objConexion.autoCommit = false
+
+                    val borrarAplicaciones = objConexion.prepareStatement("DELETE FROM Aplicacion_Medicamentos WHERE id_paciente = ?")!!
+                    borrarAplicaciones.setInt(1, id_paciente)
+                    val aplicacionesEliminadas = borrarAplicaciones.executeUpdate()
+                    Log.d("deleteData", "Aplicaciones eliminadas: $aplicacionesEliminadas")
+
                     val borrarPaciente =
                         objConexion.prepareStatement("delete from Pacientes where id_paciente = ?")!!
                     borrarPaciente.setInt(1, id_paciente)
-                    borrarPaciente.executeUpdate()
+                    val pacienteEliminado = borrarPaciente.executeUpdate()
+                    Log.d("deleteData", "Paciente eliminado: $pacienteEliminado")
 
-                    val commit = objConexion.prepareStatement("commit")!!
-                    commit.executeUpdate()
+                    objConexion.commit()
+                    Log.d("deleteData", "Commit exitoso")
 
                     withContext(Dispatchers.Main) {
                         Datos = dataList.toList()
@@ -75,14 +84,29 @@ class AdaptadorPacientes(var Datos: List<Pacientes>): RecyclerView.Adapter<ViewH
                         )
                             .show()
                     }
-                } catch (e: Exception) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(context, "Error al borrar paciente", Toast.LENGTH_SHORT)
-                            .show()
+                } catch (e: SQLException) {
+                    Log.e("deleteData", "Error al ejecutar operación SQL", e)
+                    try {
+                        objConexion.rollback()
+                        Log.d("deleteData", "Rollback exitoso")
+                    }catch (rollbackEx: SQLException){
+                        Log.e("deleteData", "Error al hacer rollback", rollbackEx)
                     }
-                    e.printStackTrace()
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(context, "Error al borrar paciente: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
+                }catch (e: Exception){
+                    Log.e("deleteData", "Error inesperado", e)
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(context, "Error inesperado: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
                 } finally {
-                    objConexion.close()
+                    try {
+                        objConexion.close()
+                        Log.d("deleteData", "Conexión cerrada exitosamente")
+                    }catch (closeEx: SQLException){
+                        Log.e("deleteData", "Error al cerrar la conexión", closeEx)
+                    }
                 }
             }else{
                 withContext(Dispatchers.Main) {

@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -45,6 +46,13 @@ class activity_asignar_medicamentos : AppCompatActivity() {
             overridePendingTransition(0, 0)
         }
 
+        val btnHome = findViewById<ImageView>(R.id.btnHome)
+        btnHome.setOnClickListener {
+            val pantallaHome = Intent(this, activity_listado_pacientes::class.java)
+            startActivity(pantallaHome)
+            overridePendingTransition(0, 0)
+        }
+
         txtHoraAplicacion = findViewById(R.id.txtHoraAplicacion)
         spPacientes = findViewById(R.id.spPacientes)
         spMedicamentos = findViewById(R.id.spMedicamentos)
@@ -71,6 +79,8 @@ class activity_asignar_medicamentos : AppCompatActivity() {
                             "Asignación guardada correctamente",
                             Toast.LENGTH_SHORT
                         ).show()
+
+                        txtHoraAplicacion.setText("")
                     } else {
                         Toast.makeText(
                             this@activity_asignar_medicamentos,
